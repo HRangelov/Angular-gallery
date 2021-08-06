@@ -11,7 +11,7 @@ The Online Gallery application resembles the general functionalities of brick-an
 Project is: _in progress_
 
 ## Inspiration
-Project is inspired by a Bulgarian Facebook group for sharing paintings of hobby artists. Some of the functionalities are base on the materials in the course Python Web Framework at SoftUni.
+Project is inspired by a Bulgarian Facebook group for sharing paintings of hobby artists. Some of the functionalities are base on the materials in the course Angular at SoftUni.
 
 ## Contact
-Created by Hristo Rangelov rangelov.hristo@gmail.com  - feel free to contact me!
+Created by HRangelov rangelov.hristo@gmail.com!
