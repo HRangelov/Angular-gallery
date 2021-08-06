@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { PaintingComponent } from './painting/painting.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaintingComponent
   ],
   imports: [
     BrowserModule,

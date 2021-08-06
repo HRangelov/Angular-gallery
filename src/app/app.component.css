@@ -1,0 +1,10 @@
+main{
+    background: #EEEEEE;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+main, ul, li{
+    display: flex;
+}
