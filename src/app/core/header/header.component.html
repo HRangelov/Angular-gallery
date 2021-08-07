@@ -1,6 +1,6 @@
 <nav class="navigation">
     <article class="navigation-logo-wrapper">
-        <h1 class="navigation-logo">
+        <h1 class="navigation-logo" routerLink="/">
             A-Gallery
         </h1>
         <span class="navigation-slogan">
@@ -10,17 +10,17 @@
     <article class="navigation-list-items">
         <ul class="navigation-list">
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" href="#">
+                <a class="navigation-list-item-link" routerLink="/" >
                     home page
                 </a>
             </li>
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" href="#">
+                <a class="navigation-list-item-link" routerLink="/paintings">
                     Paintings
                 </a>
             </li>
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" href="#">
+                <a class="navigation-list-item-link" routerLink="/artists">
                     Artists
                 </a>
             </li>
@@ -34,12 +34,12 @@
                     contact us
                 </a>
             <li class="navigation-list-item login">
-                <a class="navigation-list-item-link" href="#">
+                <a class="navigation-list-item-link" routerLink="/login">
                     Login
                 </a>
-            <li class="navigation-list-item logout">
-                <a class="navigation-list-item-link" href="#">
-                    Logout
+            <li class="navigation-list-item register">
+                <a class="navigation-list-item-link" routerLink="/register">
+                    Register
                 </a>
             </li>
         </ul>
