@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserRoutingModule } from './user-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserService } from './user.service';
 
 
 
@@ -18,6 +19,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     UserRoutingModule,
     FontAwesomeModule
+  ],
+  providers:[
+    UserService
   ]
 })
 export class UserModule { }

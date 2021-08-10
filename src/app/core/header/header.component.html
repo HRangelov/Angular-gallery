@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" routerLink="/paintings">
+                <a class="navigation-list-item-link" routerLink="/paintings-list">
                     Paintings
                 </a>
             </li>
@@ -25,22 +25,31 @@
                 </a>
             </li>
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" href="#">
-                    something
+                <a class="navigation-list-item-link" routerLink="/add-painting">
+                    Add Painting
                 </a>
             </li>
             <li class="navigation-list-item">
                 <a class="navigation-list-item-link" href="#">
                     contact us
                 </a>
-            <li class="navigation-list-item login">
+            <li *ngIf= "!isLogged" class="navigation-list-item login">
                 <a class="navigation-list-item-link" routerLink="/login">
                     Login
                 </a>
-            <li class="navigation-list-item register">
+            <li *ngIf= "!isLogged" class="navigation-list-item register">
                 <a class="navigation-list-item-link" routerLink="/register">
                     Register
                 </a>
+            </li>
+            <li *ngIf= "isLogged" class="navigation-list-item logout">
+                <p>Welcome {{firstName}}</p>
+                <a routerLink="/profile">Profile
+            
+                </a>
+            </li>
+            <li *ngIf= "isLogged" class="navigation-list-item">
+                <a class="navigation-list-item-link" (click)="logout()">Logout </a>
             </li>
         </ul>
     </article>

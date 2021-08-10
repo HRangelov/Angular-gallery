@@ -5,19 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { PaintingComponent } from './painting/painting.component';
+import { PaintingModule } from './painting/painting.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PaintingComponent
+    AppComponent
+   
   ],
   imports: [
     BrowserModule,
     CoreModule,
     AppRoutingModule,
     UserModule,
+    PaintingModule,
     FontAwesomeModule
 
 

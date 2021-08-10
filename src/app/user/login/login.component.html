@@ -11,20 +11,20 @@
                     <fa-icon [icon]="icons.faEnvelope"></fa-icon>
                    
                 </span></label>
-                <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
-            </p>
-            <p class="error">
-                Email is required!
+                <input  #emailInput class="input-error" type="email" name="email" id="email" placeholder="email@email.com">
             </p>
             <!-- <p class="error">
-                Email is not valid!
+                Email is required!
+            </p>
+            <p class="error"> -->
+                <!-- Email is not valid!
             </p> -->
 
             <p class="field field-icon">
                 <label for="password"><span>
                     <fa-icon [icon]="icons.faLock"></fa-icon>
                 </span></label>
-                <input type="password" name="password" id="password" placeholder="******">
+                <input #passwordInput type="password" name="password" id="password" placeholder="******">
             </p>
             <!-- <p class="error">
                 Password is required!
@@ -33,7 +33,7 @@
                 Password must be at least 4 characters!
             </p> -->
             
-            <button disabled>Login</button>
+            <button (click)="login(emailInput.value, passwordInput.value)">Login</button>
             
             <p class="text-center">
                 Have an account?
