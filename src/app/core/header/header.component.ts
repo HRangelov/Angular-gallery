@@ -11,8 +11,8 @@ export class HeaderComponent {
  get isLogged(): boolean{
     return this.userService.isLogged;
  }
- get firstName(): string {
-  return this.userService.user?.firstName || '';
+ get username(): string {
+  return this.userService.user?.username || '';
 }
   
   
@@ -21,11 +21,11 @@ export class HeaderComponent {
     private router: Router
     ) { }
 
-  logout():void{
-    this.userService.logout();
-    this.router.navigate(['/']);
-    
-  }
+    logout(): void {
+      this.userService.logout().subscribe(() => {
+        this.router.navigate(['/']);
+      });
+    }
   
 
 }

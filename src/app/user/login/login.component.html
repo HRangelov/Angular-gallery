@@ -1,7 +1,7 @@
 <section>
 
     <!-- <div class="container"> -->
-        <form class="login" action="" method="post">
+        <form #form="ngForm" class="login" action="" method="post" (ngSubmit)="login(form)">
             
         <fieldset>
             <h2>Login Form</h2>
@@ -11,33 +11,41 @@
                     <fa-icon [icon]="icons.faEnvelope"></fa-icon>
                    
                 </span></label>
-                <input  #emailInput class="input-error" type="email" name="email" id="email" placeholder="email@email.com">
+                <input  #emailInput="ngModel" [appMyValidator]="emailValidator" ngModel class="input-error" type="email" name="email" id="email" placeholder="email@email.com" required email>
             </p>
-            <!-- <p class="error">
+           
+           <ng-container *ngIf="emailInput.touched">
+            <p *ngIf="emailInput.errors?.required" class="error">
                 Email is required!
             </p>
-            <p class="error"> -->
-                <!-- Email is not valid!
-            </p> -->
+            <p *ngIf="emailInput.errors?.invalidEmail" class="error">
+                Email is not valid!
+            </p>
+           </ng-container>
+            
 
             <p class="field field-icon">
                 <label for="password"><span>
                     <fa-icon [icon]="icons.faLock"></fa-icon>
                 </span></label>
-                <input #passwordInput type="password" name="password" id="password" placeholder="******">
+                <input #passwordInput="ngModel" ngModel type="password" name="password" id="password" placeholder="******" minlength="5" required>
             </p>
-            <!-- <p class="error">
-                Password is required!
-            </p>
-            <p class="error">
-                Password must be at least 4 characters!
-            </p> -->
+            <ng-container *ngIf="passwordInput.touched">
+                <p *ngIf="passwordInput.errors?.required" class="error">
+                    Password is required!
+                </p>
+                <p *ngIf="passwordInput.errors?.minlength" class="error">
+                    Password must be at least 5 characters!
+                </p>
+            </ng-container>
             
-            <button (click)="login(emailInput.value, passwordInput.value)">Login</button>
+            
+            <button>Login</button>
+            <!-- <button (click)="login(emailInput.value, passwordInput.value)">Login</button> -->
             
             <p class="text-center">
                 Have an account?
-                <a href="#">Register</a>
+                <a routerLink="/register">Register</a>
             </p>
             
         </fieldset>

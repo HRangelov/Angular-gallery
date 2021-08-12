@@ -1,5 +1,9 @@
 export interface IUser {
+  // alternative
   email: string;
-  firstName: string;
-  lastName: string;
+  username: string;
+  // original
+  // email: string;
+  // firstName: string;
+  // lastName: string;
 }

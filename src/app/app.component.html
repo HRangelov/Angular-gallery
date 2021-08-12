@@ -1,7 +1,19 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<article *ngIf="isAuthenticating">Loading...</article>
+<ng-container *ngIf="!isAuthenticating">
+
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <!-- <main>
+        body 
+    </main> -->
+    <app-footer></app-footer>
+    <!-- to check the place of it -->
+</ng-container>
+
+<!-- <app-header></app-header>
+<router-outlet></router-outlet> -->
 <!-- <main>
     body 
 </main> -->
-<app-footer></app-footer>
-<!-- to check the place of it -->
+<!-- <app-footer></app-footer>
+to check the place of it -->

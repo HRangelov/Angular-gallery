@@ -23,7 +23,8 @@ import { HomeComponent } from './home/home.component';
   ],
   exports: [
     HeaderComponent, 
-    FooterComponent
+    FooterComponent, 
+    HomeComponent
   ],
   providers: [
     {

@@ -7,23 +7,31 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { PaintingModule } from './painting/painting.module';
 import { UserModule } from './user/user.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContentService } from './content.service';
+import { SharedModule } from './shared/shared.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
    
   ],
   imports: [
     BrowserModule,
     CoreModule,
-    AppRoutingModule,
     UserModule,
+    HttpClientModule,
     PaintingModule,
-    FontAwesomeModule
-
+    FontAwesomeModule,
+    AppRoutingModule,
+    SharedModule
 
   ],
-  providers: [],
+  providers: [
+    ContentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
