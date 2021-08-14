@@ -38,5 +38,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.2"
-  }
+  },
+  "description": "> Online Gallery is a Angular and Firebase based project of an online application where you can show your paintings to the public. It is made for the SoftUni's Angular July 2021 course project defence exam.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRangelov/Angular-gallery.git"
+  },
+  "author": "HRangelov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HRangelov/Angular-gallery/issues"
+  },
+  "homepage": "https://github.com/HRangelov/Angular-gallery#readme"
 }
